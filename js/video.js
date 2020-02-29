@@ -28,7 +28,6 @@ function increaseSpeed() {
 }
 
 function skipAhead() {
-	// TODO: 
 	newTime = video.currentTime + 60;
 
 	if (newTime > video.duration) {
@@ -54,21 +53,21 @@ function mute() {
 }
 
 function changeVolume() {
-	videoVolume = document.querySelector("#volumeSlider");
-	video.volume = videoVolume.value / 100
-	document.querySelector("#volume").innerHTML = videoVolume.value + '%'
+	videoVolumeSlider = document.querySelector("#volumeSlider");
 
-	console.log("Volume is " + videoVolume.value);
-	console.log("Inner html is " + videoVolume.value);
+	video.volume = videoVolumeSlider.value / 100
+	document.querySelector("#volume").innerHTML = videoVolumeSlider.value + '%'
+
+	console.log("Volume is " + videoVolumeSlider.value);
 }
 
 
 function gray() {
-	video.style.filter = "grayscale(100%)";
+	video.className = "grayscale"
 	console.log("In grayscale")
 }
 
 function color() {
-	video.style.filter = "grayscale(0%)";
+	video.className = ""
 	console.log("In color")
 }
