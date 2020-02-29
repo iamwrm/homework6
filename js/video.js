@@ -12,13 +12,13 @@ function getVid() {
 		if (b1) {
 			if (buttons[i].type == 'button' && buttons[i].className == 'play') {
 				b1 = false
-				buttons[i].innerHTML = '<img src="./img/new_play.png">' + buttons[i].innerHTML
+				buttons[i].innerHTML = '<img src="./img/new_play.png" alt="playButtonPic">' + buttons[i].innerHTML
 			}
 		}
 		if (b2) {
 			if (buttons[i].type == 'button' && buttons[i].className == 'pause') {
 				b2 = false
-				buttons[i].innerHTML = '<img src="./img/new_pause.png">' + buttons[i].innerHTML
+				buttons[i].innerHTML = '<img src="./img/new_pause.png" alt="pauseButtonPic">' + buttons[i].innerHTML
 			}
 		}
 		if (!b1 && !b2) {
