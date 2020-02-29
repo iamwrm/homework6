@@ -2,6 +2,36 @@ var video;
 
 function getVid() {
 	video = document.querySelector("#myVideo");
+
+	var buttons = document.getElementsByTagName('button');
+
+	b1 = true
+	b2 = true
+
+	for (var i = 0; i < buttons.length; i++) {
+		if (b1) {
+			if (buttons[i].type == 'button' && buttons[i].className == 'play') {
+				b1 = false
+				buttons[i].innerHTML = '<img src="./img/new_play.png">' + buttons[i].innerHTML
+			}
+		}
+		if (b2) {
+			if (buttons[i].type == 'button' && buttons[i].className == 'pause') {
+				b2 = false
+				buttons[i].innerHTML = '<img src="./img/new_pause.png">' + buttons[i].innerHTML
+			}
+		}
+		if (!b1 && !b2) {
+			break;
+		}
+	}
+	/*
+	Copyrights Information:
+	The above images "./img/new_play.png" and "./img/new_pause.png" is 
+	created by Ren Wang
+	All rights reserved
+	*/
+
 }
 
 function playVid() {
